@@ -1,11 +1,7 @@
 @startuml
-:Cliente: as actor1
-(Confirmar pedido) as UC1
-(Cancelar pedido) as UC2
-(Devolver cambio) as UC3
+(Acceder) as UC1
+(Registrarse) as UC2
 
-actor1--UC1
-actor1--UC2
-UC1 ...> UC3 : <<includes>>
-UC2 ...> UC3 : <<includes>>
+UC2 ...> UC1 : <<extends>>
+
 @enduml
