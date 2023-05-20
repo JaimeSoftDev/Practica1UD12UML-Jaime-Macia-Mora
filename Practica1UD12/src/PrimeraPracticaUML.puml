@@ -1,17 +1,18 @@
 @startuml
-:new Actor: as actor1
-(Identificarse) as UC1
-(Registrarse) as UC2
-(Pagar) as UC3
-(Pagar con tarjeta) as UC4
-(Pagar con transferencia) as UC5
-(Elegir mensajero) as UC6
-(Confirmar) as UC7
+:Usuario: as actor1
+:Administrador: as actor2
+
+(Iniciar sesión) as UC1
+(Recuperar contraseña) as UC2
+(Modificar contraseña) as UC3
+(Cerrar sesión) as UC4
+(Registrar usuario) as UC5
+(Instalar programa) as UC6
+actor2 --|> actor1
 actor1 -- UC1
+actor1 -- UC2
 actor1 -- UC3
-actor1 -- UC6
-actor1 -- UC7
-UC2 ..> UC1 : <<extends>>
-UC4 --> UC3
-UC5 --> UC3
+actor1 -- UC4
+actor2 -- UC5
+actor2 -- UC6
 @enduml
