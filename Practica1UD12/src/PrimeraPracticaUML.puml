@@ -1,7 +1,15 @@
 @startuml
-(Acceder) as UC1
-(Registrarse) as UC2
+(Pagar) as UC1
+(Pagar con tarjeta) as UC2
+(Pagar con efectivo) as UC3
+UC2--|>UC1
+UC3--|>UC1
 
-UC2 ...> UC1 : <<extends>>
-
+:Cliente: as actor1
+:Cliente VIP: as actor2
+(Reservar vuelo) as UC4
+(Elegir asientos) as UC5
+actor2 --|> actor1
+actor1 -- UC4
+actor2 -- UC5
 @enduml
