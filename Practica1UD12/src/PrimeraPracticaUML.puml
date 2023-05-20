@@ -1,15 +1,14 @@
 @startuml
-(Pagar) as UC1
-(Pagar con tarjeta) as UC2
-(Pagar con efectivo) as UC3
-UC2--|>UC1
-UC3--|>UC1
-
 :Cliente: as actor1
-:Cliente VIP: as actor2
-(Reservar vuelo) as UC4
-(Elegir asientos) as UC5
-actor2 --|> actor1
+(Meter dinero) as UC1
+(Pedir azúcar) as UC2
+(Pedir producto) as UC3
+(Cancelar) as UC4
+(Devolver dinero) as UC5
+actor1 -- UC1
+actor1 -- UC2
+actor1 -- UC3
 actor1 -- UC4
-actor2 -- UC5
+UC3 ..> UC5 : <<includes>>
+UC4 ..> UC5 : <<includes>>
 @enduml
