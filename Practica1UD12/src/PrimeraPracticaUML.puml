@@ -1,13 +1,11 @@
 @startuml
 :Cliente: as actor1
-rectangle {
-usecase "Mostrar menú" as UC1
-usecase "Pedir comida" as UC2
-}
-:Restaurante: as actor2
-(Entregar comida) as UC3
+(Confirmar pedido) as UC1
+(Cancelar pedido) as UC2
+(Devolver cambio) as UC3
+
 actor1--UC1
 actor1--UC2
-actor2--UC1
-actor2--UC3
+UC1 ...> UC3 : <<includes>>
+UC2 ...> UC3 : <<includes>>
 @enduml
