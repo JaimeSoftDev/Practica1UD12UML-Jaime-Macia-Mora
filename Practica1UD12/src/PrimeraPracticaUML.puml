@@ -1,18 +1,13 @@
 @startuml
-:Usuario: as actor1
-:Administrador: as actor2
+:Ciudadano: as actor1
+:Ciudadano extranjero: as actor2
 
-(Iniciar sesión) as UC1
-(Recuperar contraseña) as UC2
-(Modificar contraseña) as UC3
-(Cerrar sesión) as UC4
-(Registrar usuario) as UC5
-(Instalar programa) as UC6
+(Registrar entrada) as UC1
+(Tomar huellas) as UC2
+
 actor2 --|> actor1
 actor1 -- UC1
-actor1 -- UC2
-actor1 -- UC3
-actor1 -- UC4
-actor2 -- UC5
-actor2 -- UC6
+actor2 -- UC2
+UC2 ..> UC1 : <<extend>>
+
 @enduml
